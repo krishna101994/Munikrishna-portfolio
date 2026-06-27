@@ -1,0 +1,388 @@
+/* ==========================================
+   MK PORTFOLIO
+   ANIMATIONS.CSS
+========================================== */
+
+/* ===== Fade In Up ===== */
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== Fade In ===== */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* ===== Slide Left ===== */
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* ===== Slide Right ===== */
+
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform:translateX(-60px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* ===== Floating Card ===== */
+
+@keyframes floating{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-18px);
+    }
+}
+
+/* ===== Aurora ===== */
+
+@keyframes auroraMove{
+
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+
+    25%{
+        transform:translate(80px,-40px) scale(1.1);
+    }
+
+    50%{
+        transform:translate(-40px,60px) scale(1.05);
+    }
+
+    75%{
+        transform:translate(60px,20px) scale(.95);
+    }
+
+    100%{
+        transform:translate(0,0) scale(1);
+    }
+
+}
+
+/* ===== Glow ===== */
+
+@keyframes glow{
+
+    0%,100%{
+
+        box-shadow:
+        0 0 10px rgba(34,211,238,.3),
+        0 0 20px rgba(34,211,238,.25);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 20px rgba(34,211,238,.6),
+        0 0 50px rgba(59,130,246,.5);
+
+    }
+
+}
+
+/* ===== Pulse ===== */
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* ===== Rotate ===== */
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ===== Typing Cursor ===== */
+
+@keyframes blink{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+}
+
+/* ===== Scroll Indicator ===== */
+
+@keyframes scroll{
+
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(20px);
+        opacity:0;
+    }
+
+}
+
+/* ==========================================
+   APPLY ANIMATIONS
+========================================== */
+
+.hero .left{
+
+    animation:
+    slideRight 6s ease;
+
+}
+
+.hero .right{
+
+    animation:
+    slideLeft 6s ease;
+
+}
+
+.hero h1{
+
+    animation:
+    fadeInUp 6s ease;
+
+}
+
+.hero h2{
+
+    animation:
+    fadeInUp 6s ease;
+
+}
+
+.hero p{
+
+    animation:
+    fadeInUp 6s ease;
+
+}
+
+.buttons{
+
+    animation:
+    fadeInUp 6s ease;
+
+}
+
+.social{
+
+    animation:
+    fadeInUp 6s ease;
+
+}
+
+.glass-card{
+
+    animation:
+    floating 6s ease-in-out infinite;
+
+}
+
+.available span{
+
+    animation:
+    pulse 2s infinite;
+
+}
+
+.circle{
+
+    animation:
+    glow 3s infinite;
+
+}
+
+.aurora{
+
+    animation:
+    auroraMove 20s linear infinite;
+
+}
+
+/* ==========================================
+   HOVER EFFECTS
+========================================== */
+
+.glass-card{
+
+    transition:.4s ease;
+
+}
+
+.glass-card:hover{
+
+    transform:
+    translateY(-12px);
+
+}
+
+.social a{
+
+    transition:.35s ease;
+
+}
+
+.social a:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.08);
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    transition:.35s ease;
+
+}
+
+.btn-primary:hover{
+
+    transform:
+    translateY(-6px);
+
+}
+
+.btn-secondary:hover{
+
+    transform:
+    translateY(-6px);
+
+}
+
+.stats div{
+
+    transition:.35s ease;
+
+}
+
+.stats div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*=============================
+Floating Badge Animation
+==============================*/
+
+.badge:nth-child(1){
+
+animation-delay:4s;
+
+}
+
+.badge:nth-child(2){
+
+animation-delay:.5s;
+
+}
+
+.badge:nth-child(3){
+
+animation-delay:4s;
+
+}
+
+.badge:nth-child(4){
+
+animation-delay:4.5s;
+
+}
+
+.badge:nth-child(5){
+
+animation-delay:4s;
+
+}
+
+.badge:nth-child(6){
+
+animation-delay:4.5s;
+
+}
+
+}
